@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+  box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+  margin: 40px 100px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+nav ul {
+  display: flex;
+  gap: 60px;
+}
+nav ul li {
+  list-style: none;
+}
+ul li a {
+  text-decoration: none;
+  color: #000;
+}
+nav .contactBtn {
+  text-decoration: none;
+  color: #000;
+  border: 1px solid black;
+  padding: 8px 15px;
+  border-radius: 8px;
+  transition: all 0.5s;
+}
+nav .contactBtn:hover {
+  transform: scale(1.1);
+  background-color: #000;
+  color: #fff;
+}
+
+.profilePicture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  width: 300px;
+  border-radius: 100%;
+  border: 1px solid blue;
+  overflow: hidden;
+  margin: auto;
+}
+.profilePicture img {
+  height: 300px;
+}
+.projects-container {
+  margin: 50px 0;
+}
+.heading {
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+.projects-container .projects-list {
+  /* border: 1px solid black; */
+  background-color: #a39999;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+.projects-list::-webkit-scrollbar {
+  display: none;
+}
+.projects-list .project {
+  /* border: 1px solid black; */
+  height: 300px;
+  width: 400px;
+  overflow: hidden;
+  border-radius: 20px;
+  flex: 0 0 auto;
+  background-color: #fff;
+  scroll-snap-align: center;
+  transition: all 0.5s;
+}
+.projects-list .project:hover {
+  transform: scale(1.07);
+  cursor: pointer;
+}
+.project img {
+  width: 100%;
+  height: 250px;
+}
+.project p {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 10px;
+  font-weight: 700;
+}
+.myskills ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.myskills ul li {
+  font-size: 22px;
+  /* margin-left: 20px; */
+  background-color: rgb(86, 71, 71);
+  color: white;
+  margin: 5px;
+  padding: 10px;
+  list-style: none;
+  width: 49%;
+  transition: all 0.5s;
+}
+.myskills ul li:nth-child(2),
+.myskills ul li:nth-child(3),
+.myskills ul li:nth-child(6),
+.myskills ul li:nth-child(7) {
+  color: rgb(39, 38, 38);
+  background-color: #a39999;
+}
+.myskills ul li:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+#contact-me {
+      margin: 50px auto;
+      border: 1px solid black;
+      width: 50%;
+      padding: 20px;
+      border-radius: 15px;
+}
+form div{
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-top: 10px;
+      font-size: 20px;
+}
+form div input{
+      font-size: 20px;
+      padding: 5px;
+}
+.submitBtn{
+      font-size: 25px;
+      font-weight: 500;
+      padding: 10px 15px;
+      border-radius: 15px;
+      outline: none;
+      border: none;
+      margin: 10px auto;
+      display: block;
+      text-align: center;
+      border: 1px solid black;
+      color: white;
+      background-color: #3a3535;
+      transition: ease-in-out .5s;
+}
+.submitBtn:hover{
+      cursor: pointer;
+      color: black;
+      background-color: transparent;
+}
+
+.profilePicture {
+    animation: move 3s ease-in-out infinite;
+}
+
+@keyframes move {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
